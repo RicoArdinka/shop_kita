@@ -1,6 +1,7 @@
 <?php
 
     include_once("function/helper.php"); //mengambil file helper 
+    $page = isset($_GET['page']) ? $_GET['page'] : false;
 
 ?>
 
@@ -31,7 +32,17 @@
                 </div>
             </div>
 
-            <div id="content"></div>
+            <div id="content">
+                <?php
+                    $filename = "$page.php";
+
+                    if(file_exists($filename)){ //apakah file didalam variable filename ada?
+                        include_once($filename);
+                    }else{
+                        echo "Maaf, file tidak ada di system"; 
+                    }
+                ?>
+            </div>
     
             <div id="footer">
                 <p>copyright weshop 2023</p>

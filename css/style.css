@@ -58,3 +58,8 @@ body{
     font-style: italic;
     margin: 0px;
 }
+
+#container #content {
+    padding: 10px 0px;
+    overflow: hidden;
+}
