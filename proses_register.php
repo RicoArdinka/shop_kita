@@ -10,14 +10,20 @@
     $phone = $_POST["phone"];
     $alamat = $_POST["alamat"];
     $password = md5($_POST["password"]);
-    $re_password = $_POST["re_password"];
+    $re_password = md5($_POST["re_password"]);
 
+    //set agar password tidak ditampilkan di url
     unset($_POST['password']);
     unset($_POST['re_password']);
-    $dataForm = http_build_query($_POST);
+    
+    $dataForm = http_build_query($_POST); //menghasilkan url 
+    
+    //cek kondisi
     if(empty($nama_lengkap) || empty($email) || empty($phone) || empty($alamat) || empty($password)){
         header("location: ".BASE_URL."index.php?page=register&notif=require&$dataForm");
+    }else if($password != $re_password){
+        header("location: ".BASE_URL."index.php?page=register&notif=password&$dataForm");
     }else{
-    mysqli_query($koneksi, "INSERT INTO user (level, nama, email, alamat, phone, password, status)
+        mysqli_query($koneksi, "INSERT INTO user (level, nama, email, alamat, phone, password, status)
                                         VALUES ('$level', '$nama_lengkap', '$email', '$alamat', '$phone', '$password', '$status')");
     }
