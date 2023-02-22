@@ -35,7 +35,7 @@
             <div id="content">
                 <?php
                     $filename = "$page.php";
-
+                    
                     if(file_exists($filename)){ //apakah file didalam variable filename ada?
                         include_once($filename);
                     }else{
