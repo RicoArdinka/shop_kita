@@ -1,7 +1,7 @@
 <?php
 
     include_once("function/helper.php"); //mengambil file helper 
-    $page = isset($_GET['page']) ? $_GET['page'] : false;
+    $page = isset($_GET['page']) ? $_GET['page'] : false; //jika get dg nilai page ada , maka dimasukkan ke variable page
 
 ?>
 
