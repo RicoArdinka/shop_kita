@@ -13,6 +13,8 @@
                 echo "<div class='notif'>Maaf, kamu harus melengkapi form dibawah</div>";
             }else if($notif == 'password'){
                 echo "<div class='notif'>Maaf, password yang kamu masukkan tidak sama</div>";
+            }else if($notif == 'email'){
+                echo "<div class='notif'>Maaf, email telah digunakan</div>";
             }
         ?>
         
