@@ -5,7 +5,7 @@
         <?php
             $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
 
-            if ($notif == 'require'){
+            if ($notif == true){
                 echo "<div class='notif'>Maaf, email atau password yang dimasukkan salah</div>";
             }
         ?>
