@@ -18,6 +18,7 @@
             }
         ?>
         
+        <!-- untuk input field -->
         <div class="element-form">
             <label>Nama Lengkap</label>
             <span><input type="text" name="nama_lengkap" value="<?= $nama_lengkap; ?>"/></span>

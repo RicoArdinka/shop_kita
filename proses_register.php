@@ -12,13 +12,13 @@
     $password = $_POST["password"];
     $re_password = $_POST["re_password"];
 
-    //set agar password tidak ditampilkan di url
+    //fungsi agar password tidak ditampilkan di url
     unset($_POST['password']);
     unset($_POST['re_password']);
 
-    $dataForm = http_build_query($_POST); //menghasilkan url 
+    $dataForm = http_build_query($_POST); //menghasilkan value form yg telah diketik ke url 
     //email yg dimasukkan user di kolom email
-    $query =mysqli_query($koneksi, "SELECT * FROM user WHERE email='$email'");
+    $query = mysqli_query($koneksi, "SELECT * FROM user WHERE email='$email'");
     
     //cek kondisi
     if(empty($nama_lengkap) || empty($email) || empty($phone) || empty($alamat) || empty($password)){
