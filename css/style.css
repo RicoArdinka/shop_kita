@@ -142,6 +142,10 @@ body{
     background: orange;
 }
 
+#menu-profile ul li a.active{
+    background-color: #ec9906;
+}
+
 #profile-content {
     float: left;
     width: 835px;
