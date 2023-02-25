@@ -3,6 +3,7 @@
     session_start();
 
     include_once("function/helper.php"); //mengambil file helper 
+    include_once("function/koneksi.php");
     $page = isset($_GET['page']) ? $_GET['page'] : false; //jika get dg nilai page ada , maka dimasukkan ke variable page
 
     $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
