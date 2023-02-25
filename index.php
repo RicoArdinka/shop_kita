@@ -29,11 +29,11 @@
                 <div id="menu">
                     <div id="user">
                         <?php
-                            if($user_id){
+                            if($user_id){ //jika udah login 
                                 echo "Hi <b>$nama</b>, 
                                       <a href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>
                                       <a href='".BASE_URL."logout.php'>Logout</a>";
-                            }else{   
+                            }else{   // jika belum login
                                 echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
                                       <a href='".BASE_URL."index.php?page=register'>Register</a>";
                             }
