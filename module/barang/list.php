@@ -25,7 +25,7 @@
 
             echo "<tr>
                     <td class='kolom-nomor'>$no</td>
-                    <td class='kiri'>$row[barang]</td>
+                    <td class='kiri'>$row[nama_barang]</td>
                     <td class='kiri'>$row[harga]</td>
                     <td class='tengah'>$row[status]</td>
                     <td class='tengah'>
