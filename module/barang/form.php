@@ -29,6 +29,9 @@
         $gambar = "<img src='".BASE_URL."images/barang/$gambar' style='width: 200px;vertical-align: middle;'/>";
     }
 ?>
+<!-- opsi untuk menambahkan isi text area sperti microsoft word -->
+<script src='<?php echo BASE_URL."js/ckeditor/ckeditor.js"; ?>'></script> 
+
 <form action="<?php echo BASE_URL."module/barang/action.php?barang_id=$barang_id"; ?>" method="POST" enctype="multipart/form-data">
 
     <div class="element-form">
@@ -54,9 +57,9 @@
         <span><input type="text" name="nama_barang" value="<?php echo $nama_barang; ?>"/></span>
     </div>
 
-    <div class="element-form">
-        <label>Spesifikasi</label>
-        <span><textarea name="spesifikasi"><?php echo $spesifikasi?></textarea></span>
+    <div style="margin-bottom: 10px;">
+        <label style="font-weight: bold;">Spesifikasi</label>
+        <span><textarea name="spesifikasi" id="editor1"><?php echo $spesifikasi?></textarea></span>
     </div>
 
     <div class="element-form">
@@ -90,3 +93,6 @@
 
 
 </form>
+<script>
+    CKEDITOR.replace( "editor1" );
+</script>
