@@ -13,8 +13,8 @@
     $update_gambar = "";
 
     if(!empty($_FILES["file"]["name"])){
-        $nama_file = $_FILES["file"]["name"];
-        move_uploaded_file($_FILES["file"]["tmp_name"], "../../images/barang/".$nama_file);
+        $nama_file = $_FILES["file"]["name"]; //[type attribute file][nama filenya]
+        move_uploaded_file($_FILES["file"]["tmp_name"], "../../images/barang/".$nama_file);//untuk upload file di tujuan baru , "alamat tujuan"
 
         $update_gambar = ", gambar='$nama_file'";
     }
