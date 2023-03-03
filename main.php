@@ -22,11 +22,17 @@
         <ul>
             <?php
 
-                $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE status='on'");
+                $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE status='on' ORDER BY barang_id DESC LIMIT 9");
 
+                $no=1;
                 while($row=mysqli_fetch_assoc($query)){
 
-                    echo "<li>
+                    $style=false;
+                    if($no == 3){
+                        $style="style='margin-right: 0px'";
+                        $no=0;
+                    }
+                    echo "<li $style>
                             <p class='price'>".rupiah($row['harga'])."</p>
                             <a href='".BASE_URL."index.php?page=detail&barang_id=$row[barang_id]'>
                                 <img src='".BASE_URL."images/barang/$row[gambar]'/>
@@ -39,6 +45,7 @@
                                 <a href='".BASE_URL."tambah_keranjang.php?barang_id=$row[barang_id]'>+ Tambah ke keranjang</a>
                             </div>
                           </li>";
+                    $no++;
                 }
             ?>
         </ul>
