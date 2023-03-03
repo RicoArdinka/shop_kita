@@ -53,7 +53,7 @@
                     if(file_exists($filename)){ //apakah file didalam variable filename ada?
                         include_once($filename);
                     }else{
-                        echo "Maaf, file tidak ada di system"; 
+                        include_once("main.php");
                     }
                 ?>
             </div>
