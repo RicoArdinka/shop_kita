@@ -228,7 +228,8 @@ body{
     text-decoration: none;
 }
 
-#menu-kategori ul li a:hover{
+#menu-kategori ul li a:hover,
+#menu-kategori ul li a.active{
     background: #e8e8e8;
 }
 
