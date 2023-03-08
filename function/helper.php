@@ -28,3 +28,8 @@
 
         return $string;
     }
+
+    //function count untuk versi 8
+    function count_($array) {
+        return is_array($array) ? count($array) : 0;
+    }
