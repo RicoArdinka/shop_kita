@@ -368,3 +368,19 @@ body{
     vertical-align: top;
 }
 
+.update-quantity {
+    width: 30px;
+    text-align: center;
+}
+
+.kanan.hapus-item {
+    position: relative;
+}
+
+.kanan.hapus-item a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-decoration: none;
+    color: #1e5474;
+}
