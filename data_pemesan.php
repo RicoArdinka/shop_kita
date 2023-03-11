@@ -1,3 +1,11 @@
+<?php
+    if($user_id == false){
+        $_SESSION['proses_pesanan'] = true; //jika tidak login tapi telah memesan maka diarahkan ke login
+
+        header("location: ".BASE_URL."index.php?page=login");
+        exit;
+    }
+?>
 <div id="frame-data-pengiriman">
 
     <h3 class="label-data-pengiriman">Alamat Pengiriman Barang</h3>
